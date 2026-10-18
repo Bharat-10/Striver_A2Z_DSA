@@ -1,0 +1,15 @@
+class Solution {
+    public boolean isArmstrong(int n) {
+        int Sum=0;
+        int revNum=0;
+        int dup=n;
+
+        while(n>0){
+            int ld=n%10;
+            revNum=(revNum*10)+ld;
+            Sum=Sum+(ld*ld*ld);
+            n=n/10;
+        }
+        return dup==Sum;
+    }
+}
